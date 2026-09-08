@@ -1241,7 +1241,7 @@
                         <h3>MacBook Air M2</h3>
                         <p class="desc">Thin, light, and incredibly powerful — the M2 chip redefines performance.</p>
                         <div>
-                            <span class="price-big">$999 <span class="old">$1,199</span></span>
+                            <span class="price-big">₹82,900 <span class="old">₹99,900</span></span>
                         </div>
                         <p class="stock">Only <strong>12</strong> items left — hurry!</p>
                         <div class="timer-grid" id="dealTimer">
@@ -1365,28 +1365,28 @@
         ];
 
         const PRODUCTS = [
-            { id: 1, title: 'iPhone 14 Pro Max', price: 1099, oldPrice: 1199, rating: 5, reviews: 128, badge: 'New',
+            { id: 1, title: 'iPhone 14 Pro Max', price: 91900, oldPrice: 99900, rating: 5, reviews: 128, badge: 'New',
                 img: 'https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=600&q=80',
                 category: 'Smartphones' },
-            { id: 2, title: 'MacBook Pro 14"', price: 1999, rating: 4, reviews: 86, badge: '',
+            { id: 2, title: 'MacBook Pro 14"', price: 165900, rating: 4, reviews: 86, badge: '',
                 img: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=600&q=80',
                 category: 'Laptops' },
-            { id: 3, title: 'Apple Watch Series 8', price: 349, oldPrice: 399, rating: 5, reviews: 214, badge: 'Sale',
+            { id: 3, title: 'Apple Watch Series 8', price: 29900, oldPrice: 34900, rating: 5, reviews: 214, badge: 'Sale',
                 img: 'https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&w=600&q=80',
                 category: 'Accessories' },
-            { id: 4, title: 'Nike Air Max 270', price: 150, rating: 4, reviews: 53, badge: '',
+            { id: 4, title: 'Nike Air Max 270', price: 12499, rating: 4, reviews: 53, badge: '',
                 img: 'https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=600&q=80',
                 category: 'Footwear' },
-            { id: 5, title: 'Sony A7 IV Camera', price: 2499, rating: 5, reviews: 42, badge: 'New',
+            { id: 5, title: 'Sony A7 IV Camera', price: 207900, rating: 5, reviews: 42, badge: 'New',
                 img: 'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=600&q=80',
                 category: 'Gadgets' },
-            { id: 6, title: 'Chanel No. 5', price: 120, rating: 5, reviews: 189, badge: '',
+            { id: 6, title: 'Chanel No. 5', price: 9999, rating: 5, reviews: 189, badge: '',
                 img: 'https://images.unsplash.com/photo-1585386959984-a4155224a1ad?auto=format&fit=crop&w=600&q=80',
                 category: 'Accessories' },
-            { id: 7, title: 'Travel Backpack', price: 79, oldPrice: 99, rating: 4, reviews: 67, badge: 'Sale',
+            { id: 7, title: 'Travel Backpack', price: 6499, oldPrice: 7999, rating: 4, reviews: 67, badge: 'Sale',
                 img: 'https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=600&q=80',
                 category: 'Accessories' },
-            { id: 8, title: 'Sony WH-1000XM5', price: 399, rating: 5, reviews: 156, badge: '',
+            { id: 8, title: 'Sony WH-1000XM5', price: 34900, rating: 5, reviews: 156, badge: '',
                 img: 'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=600&q=80',
                 category: 'Gadgets' }
         ];
@@ -1471,7 +1471,7 @@
                 el.className = 'product-card';
                 const badgeClass = p.badge === 'Sale' ? 'sale' : '';
                 const badgeHtml = p.badge ? `<span class="badge ${badgeClass}">${p.badge}</span>` : '';
-                const oldPriceHtml = p.oldPrice ? `<span class="old-price">$${p.oldPrice.toLocaleString()}</span>` :
+                const oldPriceHtml = p.oldPrice ? `<span class="old-price">₹${p.oldPrice.toLocaleString('en-IN')}</span>` :
                 '';
                 const stars = '★'.repeat(Math.round(p.rating)) + '☆'.repeat(5 - Math.round(p.rating));
                 el.innerHTML = `
@@ -1484,7 +1484,7 @@
                         <div class="category-tag">${p.category}</div>
                         <h5>${escapeHtml(p.title)}</h5>
                         <div class="price-row">
-                            <span class="price">$${p.price.toLocaleString()}</span>
+                            <span class="price">₹${p.price.toLocaleString('en-IN')}</span>
                             ${oldPriceHtml}
                         </div>
                         <div class="rating">
